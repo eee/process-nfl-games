@@ -120,7 +120,7 @@ def main():
         t2t = sys.argv[5]
     else:
         print 'Usage: python process_game.py play_by_play_file_path team_1_name team_1_abbreviation team_2_name team_2_abbreviation'
-        filename = './games/pack_steel_play_by_play'
+        filename = './games/packers_steelers_pre'
         t1 = 'Green Bay Packers'
         t1t = 'GB'
         t2 = 'Pittsburgh Steelers'
