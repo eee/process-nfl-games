@@ -43,7 +43,7 @@ def extract_drives(game,t1,t2):
                     #remove pat tries
                     if not (spot.down == 0 and spot.distance == 0):
                         drive[1].append(Spot(match=a))
-                elif 'TOUCHDOWN' in p and 'FUMBLE' not in p and 'INTERCEPT' not in p:
+                elif 'TOUCHDOWN' in p and 'FUMBLE' not in p and 'INTERCEPT' not in p and 'TOUCHDOWN NULLIFIED' not in p:
                     drive[1].append(Spot(special='TOUCHDOWN'))
                 elif 'punts' in p:
                     drive[1].append(Spot(special='PUNT'))
