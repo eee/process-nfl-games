@@ -79,7 +79,6 @@ def process_drives(drives,t1,t1t,t2,t2t):
             direction = t1t
         for p in plays:
             result = None
-            print p
             if not prev:
                 prev = p
             else:
@@ -88,12 +87,14 @@ def process_drives(drives,t1,t1t,t2,t2t):
                         result = 101
                 else:
                     result = gained(p.half,p.mark,prev.half,prev.mark,direction)
-                if result:
-                    print result
+                if result is not None:
+                    print '('+str(prev)+') '+ str(p) + ' : ' + str(result)
                     cumresults = results[team]
                     cumresults.append(result)
                     results[team] = cumresults
                     prev = p
+                else:
+                    print '('+str(prev)+') '+ str(p)
     return results
 
 
