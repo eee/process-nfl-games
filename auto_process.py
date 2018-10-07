@@ -47,7 +47,8 @@ def process_play(play,team_results):
         if score == 'TD' and scoringTeam['abbreviation'] == poss:
             result = 101
         tr = team_results.get(poss,[])
-        tr.append(yards)
+        tr.append(result)
+        #print result
         team_results[poss]=tr
     return team_results
 
